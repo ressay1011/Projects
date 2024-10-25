@@ -10,3 +10,17 @@ Este programa Java básico se encarga de:
 Tecnologías Utilizadas:
 
 Java: Lenguaje de programación utilizado para desarrollar el programa.
+
+Program: 3-Word Reader
+
+Description:
+
+This simple Java program is designed to:
+
+1) Prompt the user to enter three words.
+2) Read the entered words from the console.
+3) Display and join the words on the console in the order they were entered.
+
+Technologies Used:
+
+Java: Programming language used to develop the program.
