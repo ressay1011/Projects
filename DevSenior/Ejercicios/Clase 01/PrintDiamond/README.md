@@ -1,18 +1,22 @@
-## Getting Started
+Programa: Imprimir Diamante
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Descripción:
 
-## Folder Structure
+Este programa Java básico se encarga de:
+1) Imprimir un diamante hecho de caracteres en la consola de comandos.
 
-The workspace contains two folders by default, where:
+Tecnologías Utilizadas:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Java: Lenguaje de programación utilizado para desarrollar el programa.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Program: Print Diamond
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Description:
 
-## Dependency Management
+This simple Java program is designed to:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1) Print a diamond made of characters in the command console.
+
+Technologies Used:
+
+Java: Programming language used to develop the program.
