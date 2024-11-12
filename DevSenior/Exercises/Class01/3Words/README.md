@@ -1,4 +1,4 @@
-# Programa: Lector de 3 Palabras
+# Programa: Lector de 3 Palabras :three::abc:
 
 ## Descripción:
 
@@ -10,9 +10,11 @@ Este programa Java básico se encarga de:
 
 ## Tecnologías Utilizadas:
 
-**Java**: Lenguaje de programación utilizado para desarrollar el programa.
+**Java** :coffee:: Lenguaje de programación utilizado para desarrollar el programa.
 
-# Program: 3-Word Reader
+#
+
+# Program: 3-Word Reader :three::abc:
 
 ## Description:
 
@@ -24,4 +26,4 @@ This simple Java program is designed to:
 
 ## Technologies Used:
 
-**Java**: Programming language used to develop the program.
+**Java** :coffee:: Programming language used to develop the program.

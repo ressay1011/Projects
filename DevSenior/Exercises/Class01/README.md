@@ -5,6 +5,8 @@
 - [x] [Imprimir Diamante](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PrintDiamond) :large_blue_diamond:
 - [x] [3 Palabras](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/3Words) :three::abc:
 
+#
+
 # Class 01 - Introduction to Java And Development Environment Setup :open_file_folder:
 
 - [x] [Personal Greeting](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PersonalGreeting) :handshake:
