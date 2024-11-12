@@ -1,4 +1,4 @@
-# Programa: Imprimir Cara
+# Programa: Imprimir Cara :slightly_smiling_face:
 
 ## Descripción:
 
@@ -8,11 +8,11 @@ Este programa Java básico se encarga de:
 
 Tecnologías Utilizadas:
 
-**Java**:coffe:: Lenguaje de programación utilizado para desarrollar el programa.
+**Java** :coffee:: Lenguaje de programación utilizado para desarrollar el programa.
 
 #
 
-# Program: Print Diamond
+# Program: Print Face :slightly_smiling_face:
 
 ## Description:
 
@@ -22,4 +22,4 @@ This simple Java program is designed to:
 
 Technologies Used:
 
-**Java**:coffe:: Programming language used to develop the program.
+**Java** :coffee:: Programming language used to develop the program.
