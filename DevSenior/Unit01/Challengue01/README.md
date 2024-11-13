@@ -1,18 +1,33 @@
-## Getting Started
+# Programa: Simulador de Viaje Interplanetario
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción:
 
-## Folder Structure
+Este programa Java básico se encarga de:
 
-The workspace contains two folders by default, where:
+1. Solicitar al usuario que ingrese tres palabras por separado.
+2. Leer las palabras introducidas desde la consola.
+3. Mostrar y concatenar las palabras en la consola en el orden en que fueron ingresadas.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+[Ejecutar](https://www.programiz.com/online-compiler/72EIVRJoxf5aa) :arrow_forward:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Tecnologías Utilizadas:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+**Java** :coffee:: Lenguaje de programación utilizado para desarrollar el programa.
 
-## Dependency Management
+#
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# Program: Interplanetary Travel Simulator
+
+## Description:
+
+This simple Java program is designed to:
+
+1. Prompt the user to enter three words.
+2. Read the entered words from the console.
+3. Display and join the words on the console in the order they were entered.
+
+[Run](https://www.programiz.com/online-compiler/72EIVRJoxf5aa) :arrow_forward:
+
+## Technologies Used:
+
+**Java** :coffee:: Programming language used to develop the program.

@@ -2,7 +2,7 @@
 
 ## [Clase 01](Class01) - Introducción a Java y Configuración Del Entorno de Desarrollo :file_folder:
 ## [Clase 02](Class02) - Variables, tipos de datos y operadores :file_folder:
-## [Reto 01](Challengue01) - Simulador de Viaje Interplanetario
+## [Reto 01](Challengue01) - Simulador de Viaje Interplanetario :file_folder:
 
 #
 
