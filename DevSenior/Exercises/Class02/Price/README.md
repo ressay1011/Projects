@@ -1,18 +1,29 @@
-## Getting Started
+# Programa: ¿Ves algún error en el precio? :x: :money_mouth_face:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripción:
 
-## Folder Structure
+Este programa Java básico se encarga de:
 
-The workspace contains two folders by default, where:
+Calcular el precio correcto por kilo del producto "Pernil Iberic D'Engreix Llen. Azuaga"
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+[Ejecutar]() :arrow_forward:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Tecnologías Utilizadas:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+**Java** :coffee:: Lenguaje de programación utilizado para desarrollar el programa.
 
-## Dependency Management
+#
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# Program: Do you see any error in the price? :x: :money_mouth_face:
+
+## Description:
+
+This simple Java program is designed to:
+
+Calculate the correct price per kilogram of the product "Pernil Iberic D'Engreix Llen. Azuaga."
+
+[Run]() :arrow_forward:
+
+Technologies Used:
+
+**Java** :coffee:: Programming language used to develop the program.
