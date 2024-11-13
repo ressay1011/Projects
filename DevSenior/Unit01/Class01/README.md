@@ -1,15 +1,15 @@
 # Clase 01 - Introducción a Java y Configuración Del Entorno de Desarrollo :open_file_folder:
 
-- [x] [Saludo Personal](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PersonalGreeting) :handshake:
-- [x] [Imprimir Cara](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PrintFace) :slightly_smiling_face:
-- [x] [Imprimir Diamante](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PrintDiamond) :large_blue_diamond:
-- [x] [3 Palabras](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/3Words) :three::abc:
+- [x] [Saludo Personal](PersonalGreeting) :handshake:
+- [x] [Imprimir Cara](PrintFace) :slightly_smiling_face:
+- [x] [Imprimir Diamante](PrintDiamond) :large_blue_diamond:
+- [x] [3 Palabras](3Words) :three::abc:
 
 #
 
 # Class 01 - Introduction to Java And Development Environment Setup :open_file_folder:
 
-- [x] [Personal Greeting](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PersonalGreeting) :handshake:
-- [x] [Print Face](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PrintFace) :slightly_smiling_face:
-- [x] [Print Diamond](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/PrintDiamond) :large_blue_diamond:
-- [x] [3 Words](https://github.com/ressay1011/Proyectos/tree/main/DevSenior/Exercises/Class01/3Words) :three::abc:
+- [x] [Personal Greeting](PersonalGreeting) :handshake:
+- [x] [Print Face](PrintFace) :slightly_smiling_face:
+- [x] [Print Diamond](PrintDiamond) :large_blue_diamond:
+- [x] [3 Words](3Words) :three::abc:
