@@ -44,7 +44,12 @@ Este programa Java básico se encarga de:
 4. **Interacción con el Usuario.**
 
 - [ ] **Menú de opciones:** El sistema debe proporcionar un menú interactivo en
-      consola que permita al usuario elegir entre las siguientes opciones: - Seleccionar un planeta de destino. - Seleccionar una nave espacial. - Iniciar la simulación del viaje. - Salir del programa.
+      consola que permita al usuario elegir entre las siguientes opciones:
+
+      - Seleccionar un planeta de destino.
+      - Seleccionar una nave espacial.
+      - Iniciar la simulación del viaje.
+      - Salir del programa.
 
 - [ ] **Validación de opciones:** El sistema debe verificar que el usuario elija una
       opción válida en el menú. Si el usuario ingresa una opción no válida, se
