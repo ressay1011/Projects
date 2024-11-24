@@ -17,12 +17,18 @@ public class Challengue01 {
     public static void main(String[] args) throws Exception {
         while (true) {
             int option;
-            int destinationPlanet;
             String[] planets = { "Mercury", "Venus", "Mars", "Jupiter", "Saturn",
                     "Uranus", "Neptune" };
+            int[] planetDistance = { 91, 41, 225, 778, 1429, 2900, 4300 };
+            int destinationPlanet;
+            String[] spaceShips = { "Red dwarf", "Discovery", "Millennium falcon" };
+            float[] spaceShipsMaxVel = {};
+            int[] spaceShipsMaxCapacity = {};
+            int spaceShipsCapacity;
+
             String[] options = {
                     "Select destination planet",
-                    "Select spacecraft",
+                    "Select spaceship",
                     "Start the travel simulation",
                     "Exit the program" };
             option = showMenu(options);
@@ -44,7 +50,7 @@ public class Challengue01 {
 
                     if (option != 0) {
                         destinationPlanet = option;
-                        menuDestinationPlanet(destinationPlanet, planets);
+                        menuDestinationPlanet(destinationPlanet, planets, planetDistance);
                     }
                     break;
                 case 2:
@@ -117,8 +123,7 @@ public class Challengue01 {
         return selection;
     }
 
-    private static void menuDestinationPlanet(int destinationPlanet, String[] planets) {
-        int[] planetDistance = { 91, 41, 225, 778, 1429, 2900, 4300 };
+    private static void menuDestinationPlanet(int destinationPlanet, String[] planets, int[] planetDistance) {
         String[] planetDescription = {
                 "is the smallest and closest planet to the Sun.\nIt has a rocky surface with extreme temperature changes, ranging from -180°C at night to 430°C during the day.\nIt orbits the Sun in just 88 days.",
                 "is the second planet from the Sun and similar in size to Earth.\nIt has a thick, toxic atmosphere primarily made of carbon dioxide, which creates a runaway greenhouse effect, making it the hottest planet in the solar system.\nSurface temperatures can reach up to 470°C.\nVenus has no moons and rotates in the opposite direction to most planets, with a day longer than its year.",
@@ -130,9 +135,9 @@ public class Challengue01 {
         };
 
         System.out.printf(
-                "The selected planet is: %1$s located approximately %2$d million kilometers from Earth.\nHere is a brief description: %3$s\nPress enter to continue.",
+                "%4$sThe selected planet is:%6$s %1$s located approximately %2$d million kilometers from Earth.\nHere is a brief description: %3$s\n%5$sPress enter to continue.%6$s",
                 planets[destinationPlanet - 1], planetDistance[destinationPlanet - 1],
-                planetDescription[destinationPlanet - 1]);
+                planetDescription[destinationPlanet - 1], GREEN, BLUE, WHITE);
         input.nextLine();
     }
 }
