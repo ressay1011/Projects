@@ -159,11 +159,11 @@ public class Challengue01 {
 
     private static String[] menuSpaceShip() {
         String[] spaceShips = { "Red dwarf", "Discovery", "Millennium falcon" };
-        int selection;
+        int selection = -1;
         String[] selectedSpaceShip = null;
         String[] options = new String[(spaceShips.length + 1)];
 
-        while (selectedSpaceShip == null) {
+        while (selectedSpaceShip == null && selection != 0) {
 
             for (var i = 0; i < spaceShips.length; i++) {
                 options[i] = spaceShips[i];
@@ -219,17 +219,17 @@ public class Challengue01 {
             System.out.printf("%1$sPlease enter the number of passengers traveling: %2$s", BLUE, WHITE);
 
             if (input.hasNextInt()) {
-                selectionTemp = input.nextInt();
+                passengersTemp = input.nextInt();
 
-                if (selectionTemp >= 0) {
-                    if (selectionTemp > Integer.parseInt(selectedSpaceShipInfo[2])) {
+                if (passengersTemp >= 0) {
+                    if (passengersTemp > Integer.parseInt(selectedSpaceShipInfo[2])) {
                         System.out.printf(
                                 "%1$sWarning: Spaceship capacity exceeded."
                                         + "The number of passengers is higher that the recommended limit."
                                         + "\nPlease proceed with caution.%2$s\n",
                                 YELLOW, WHITE);
                     }
-                    spaceShipsCapacity = String.valueOf(selectionTemp);
+                    spaceShipsCapacity = String.valueOf(passengersTemp);
                 } else {
                     System.out.printf("%1$sError: Please enter a positive number.%2$s\n", RED, WHITE);
                 }
@@ -243,7 +243,5 @@ public class Challengue01 {
 
         return selectedSpaceShipInfo;
     }
-
-
 
 }
