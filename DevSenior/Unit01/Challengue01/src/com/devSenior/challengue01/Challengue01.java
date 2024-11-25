@@ -6,6 +6,7 @@ public class Challengue01 {
 
     static final String RED = "\u001B[31m";
     static final String GREEN = "\u001B[32m";
+    static final String YELLOW = "\u001B[33m";
     static final String BLUE = "\u001B[34m";
     static final String WHITE = "\u001B[37m";
 
@@ -14,20 +15,10 @@ public class Challengue01 {
     public static void main(String[] args) throws Exception {
         while (true) {
             int option;
-
-            String[] planets = { "Mercury", "Venus", "Mars", "Jupiter", "Saturn",
-                    "Uranus", "Neptune" };
             String[] destinationPlanet;
-
-            String[] spaceShips = { "Red dwarf", "Discovery", "Millennium falcon" };
             String[] selectedSpaceShip;
 
-            String[] options = {
-                    "Select destination planet",
-                    "Select spaceship",
-                    "Start the travel simulation",
-                    "Exit the program" };
-            option = showMenu(options);
+            option = mainMenu();
 
             switch (option) {
                 case 0:
@@ -35,32 +26,10 @@ public class Challengue01 {
                     System.exit(0);
                     break;
                 case 1:
-                    options = new String[(planets.length + 1)];
-
-                    for (var i = 0; i < planets.length; i++) {
-                        options[i] = planets[i];
-                    }
-
-                    options[planets.length] = "Back";
-                    option = showMenu(options);
-
-                    if (option != 0) {
-                        destinationPlanet = destinationPlanet(option, planets);
-                    }
+                    destinationPlanet = menuDestinationPlanet();
                     break;
                 case 2:
-                    options = new String[(spaceShips.length + 1)];
-
-                    for (var i = 0; i < spaceShips.length; i++) {
-                        options[i] = spaceShips[i];
-                    }
-
-                    options[spaceShips.length] = "Back";
-                    option = showMenu(options);
-
-                    if (option != 0) {
-                        selectedSpaceShip = selectedSpaceShip(option, spaceShips);
-                    }
+                    selectedSpaceShip = menuSpaceShip();
                     break;
                 case 3:
                     break;
@@ -130,6 +99,40 @@ public class Challengue01 {
         return selection;
     }
 
+    private static int mainMenu() {
+        int selection;
+        String[] options = {
+                "Select destination planet",
+                "Select spaceship",
+                "Start the travel simulation",
+                "Exit the program" };
+
+        selection = showMenu(options);
+
+        return selection;
+    }
+
+    private static String[] menuDestinationPlanet() {
+        String[] planets = { "Mercury", "Venus", "Mars", "Jupiter", "Saturn",
+                "Uranus", "Neptune" };
+        int selection;
+        String[] destinationPlanet = { "" };
+        String[] options = new String[(planets.length + 1)];
+
+        for (var i = 0; i < planets.length; i++) {
+            options[i] = planets[i];
+        }
+        options[planets.length] = "Back";
+
+        selection = showMenu(options);
+
+        if (selection != 0) {
+            destinationPlanet = destinationPlanet(selection, planets);
+        }
+
+        return destinationPlanet;
+    }
+
     private static String[] destinationPlanet(int option, String[] planets) {
         String[] planetDistance = { "91", "41", "225", "778", "1429", "2900", "4300" };
         String[] planetDescription = {
@@ -154,29 +157,93 @@ public class Challengue01 {
         return destinationPlanetInfo;
     }
 
+    private static String[] menuSpaceShip() {
+        String[] spaceShips = { "Red dwarf", "Discovery", "Millennium falcon" };
+        int selection;
+        String[] selectedSpaceShip = null;
+        String[] options = new String[(spaceShips.length + 1)];
+
+        while (selectedSpaceShip == null) {
+
+            for (var i = 0; i < spaceShips.length; i++) {
+                options[i] = spaceShips[i];
+            }
+
+            options[spaceShips.length] = "Back";
+            selection = showMenu(options);
+
+            if (selection != 0) {
+                selectedSpaceShip = selectedSpaceShip(selection, spaceShips);
+            }
+        }
+        return selectedSpaceShip;
+    }
+
     private static String[] selectedSpaceShip(int option, String[] spaceShips) {
-        String[] spaceShipsMaxVel = { "36.4", "28", "42" };
+        var confirmation = "";
+        String[] spaceShipsMaxVel = { "36.400", "28.000", "42.000" };
         String[] spaceShipsMaxCapacity = { "10", "25", "5" };
         String[] spaceShipsMaxFuel = { "600", "900", "450" };
         String[] spaceShipsMaxOxygen = { "600", "900", "450" };
         String[] spaceShipsMaxWeight = { "3000", "5050", "2000" };
         var spaceShipsCapacity = "";
+        var passengersTemp = 0;
 
-        String[] selectedSpaceShipInfo = new String[6];
-        selectedSpaceShipInfo[0] = spaceShipsMaxVel[option - 1];
-        selectedSpaceShipInfo[1] = spaceShipsMaxCapacity[option - 1];
-        selectedSpaceShipInfo[2] = spaceShipsMaxFuel[option - 1];
-        selectedSpaceShipInfo[3] = spaceShipsMaxOxygen[option - 1];
-        selectedSpaceShipInfo[4] = spaceShipsMaxWeight[option - 1];
-        selectedSpaceShipInfo[5] = spaceShipsCapacity;
+        String[] selectedSpaceShipInfo = new String[7];
+        selectedSpaceShipInfo[0] = spaceShips[option - 1];
+        selectedSpaceShipInfo[1] = spaceShipsMaxVel[option - 1];
+        selectedSpaceShipInfo[2] = spaceShipsMaxCapacity[option - 1];
+        selectedSpaceShipInfo[3] = spaceShipsMaxFuel[option - 1];
+        selectedSpaceShipInfo[4] = spaceShipsMaxOxygen[option - 1];
+        selectedSpaceShipInfo[5] = spaceShipsMaxWeight[option - 1];
 
         System.out.printf(
-                "%4$sThe selected planet is:%6$s %1$s located approximately %2$s million kilometers from Earth %3$s\n%5$sPress enter to continue.%6$s",
-                destinationPlanetInfo[0], destinationPlanetInfo[1],
-                planetDescription[option - 1], GREEN, BLUE, WHITE);
-        input.nextLine();
+                "%7$sThe selected spaceship is:%9$s %1$s \n- Velocity: %2$s KM/H\n- Max.Capacity: %3$s Passengers"
+                        + "\n- Max.Fuel: %4$s Tons\n- Max.Oxygen: %5$s KG\n- Max.Weight: %6$s Tons\n"
+                        + "%8$sDo you want to select this spaceship(Y/n): %9$s",
+                selectedSpaceShipInfo[0], selectedSpaceShipInfo[1], selectedSpaceShipInfo[2],
+                selectedSpaceShipInfo[3], selectedSpaceShipInfo[4], selectedSpaceShipInfo[5],
+                GREEN, BLUE, WHITE);
+
+        confirmation = input.nextLine();
+
+        if (confirmation.equalsIgnoreCase("n")) {
+            return null;
+        }
+
+        System.out.printf(
+                "%2$sSpaceship %1$s successfully selected.%3$s \n",
+                selectedSpaceShipInfo[0], GREEN, WHITE);
+
+        while (spaceShipsCapacity.isBlank()) {
+            System.out.printf("%1$sPlease enter the number of passengers traveling: %2$s", BLUE, WHITE);
+
+            if (input.hasNextInt()) {
+                selectionTemp = input.nextInt();
+
+                if (selectionTemp >= 0) {
+                    if (selectionTemp > Integer.parseInt(selectedSpaceShipInfo[2])) {
+                        System.out.printf(
+                                "%1$sWarning: Spaceship capacity exceeded."
+                                        + "The number of passengers is higher that the recommended limit."
+                                        + "\nPlease proceed with caution.%2$s\n",
+                                YELLOW, WHITE);
+                    }
+                    spaceShipsCapacity = String.valueOf(selectionTemp);
+                } else {
+                    System.out.printf("%1$sError: Please enter a positive number.%2$s\n", RED, WHITE);
+                }
+            } else {
+                System.out.printf("%1$sError: Please enter a positive number.%2$s\n", RED, WHITE);
+            }
+            input.nextLine();
+        }
+
+        selectedSpaceShipInfo[6] = spaceShipsCapacity;
 
         return selectedSpaceShipInfo;
     }
+
+
 
 }
