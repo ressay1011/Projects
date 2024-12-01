@@ -1,0 +1,116 @@
+@import "vars.css";
+
+.header {
+  background: radial-gradient(
+    circle,
+    var(--color-primario) 0%,
+    var(--color-segundario) 100%
+  );
+}
+
+.body {
+  background-color: var(--color-terciario);
+}
+
+#form-search {
+  position: relative;
+  height: 40px;
+  width: 30em;
+}
+
+#input-search {
+  border-radius: 30px;
+  border-color: var(--color-segundario);
+  border-width: 1px;
+}
+
+#input-search::placeholder {
+  color: var(--color-primario);
+  font-size: var(--font-placeholder-size);
+  font-family: var(--font-placeholder-family);
+  font-weight: var(--font-placeholder-weight);
+  text-align: center;
+}
+
+#btn-search {
+  position: absolute;
+  right: 0;
+  color: var(--color-segundario);
+  font-size: var(--font-placeholder-size);
+  font-family: var(--font-placeholder-family);
+  font-weight: var(--font-placeholder-weight);
+}
+
+#input-search:not(:placeholder-shown) {
+  z-index: 1;
+}
+
+#btn-login {
+  padding: 8px;
+  font-size: var(--font-buttons-size);
+  font-family: var(--font-buttons-family);
+  font-weight: var(--font-buttons-weight);
+  text-transform: uppercase;
+}
+
+#btn-register {
+  padding: 8px;
+  font-size: var(--font-buttons-size);
+  font-family: var(--font-buttons-family);
+  font-weight: var(--font-buttons-weight);
+  text-transform: uppercase;
+}
+
+.carousel-inner {
+  max-height: 20rem;
+}
+
+#hero {
+  position: relative;
+}
+
+#hero-img {
+  opacity: 70%;
+}
+
+#hero-titles {
+  position: absolute;
+  bottom: 80px;
+  left: 70px;
+  text-align: center;
+}
+
+#title {
+  font-size: var(--font-title-size);
+  font-family: var(--font-title-family);
+  font-weight: var(--font-title-weight);
+  color: var(--color-primario);
+  -webkit-text-stroke-color: var(--color-segundario);
+  -webkit-text-stroke-width: 3px;
+  text-transform: uppercase;
+}
+
+#subtitle {
+  font-size: var(--font-subtitle-size);
+  font-family: var(--font-subtitle-family);
+  font-weight: var(--font-subtitle-weight);
+  color: var(--color-segundario);
+  text-transform: uppercase;
+}
+
+#section-title {
+  background: radial-gradient(
+    circle 20em,
+    var(--color-segundario) 0%,
+    var(--color-primario) 100%
+  );
+  border-radius: 30px;
+  text-align: center;
+  font-size: var(--font-subtitle-size);
+  font-family: var(--font-title-family);
+  font-weight: var(--font-title-weight);
+  color: var(--color-terciario);
+  -webkit-text-stroke-color: var(--color-terciario);
+  -webkit-text-stroke-width: 1px;
+  text-transform: uppercase;
+}
