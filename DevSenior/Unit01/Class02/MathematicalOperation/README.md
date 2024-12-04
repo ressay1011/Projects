@@ -9,7 +9,7 @@ Resolver el reto de programar la operación matemática "6 / 2 ( 1 + 2 )" utiliz
 - ¿Cuál es el resultado correcto de la operación? ¿1 ó 9?
 - Explique por que la otra calculadora genera un resultado diferente.
 
-[Ejecutar](https://www.programiz.com/online-compiler/493KagPk1i1W1) :arrow_forward:
+[Ejecutar](https://onlinegdb.com/yyF-eV5cF) :arrow_forward:
 
 Tecnologías Utilizadas:
 
@@ -28,7 +28,7 @@ Resolve the challenge of programming the mathematical operation "6/2(1+2)" using
 - What is the correct result of the operation? 1 or 9?
 - Explain why the other calculator generates a different result.
 
-[Run](https://www.programiz.com/online-compiler/493KagPk1i1W1) :arrow_forward:
+[Run](https://onlinegdb.com/yyF-eV5cF) :arrow_forward:
 
 Technologies Used:
 

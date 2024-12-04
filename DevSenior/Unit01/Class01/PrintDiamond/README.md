@@ -6,7 +6,7 @@ Este programa Java básico se encarga de:
 
 1. Imprimir un diamante hecho de caracteres en la consola de comandos.
 
-[Ejecutar](https://www.programiz.com/online-compiler/1K0gM4n0r1dtK) :arrow_forward:
+[Ejecutar](https://onlinegdb.com/0Lz96T_YEJ) :arrow_forward:
 
 Tecnologías Utilizadas:
 
@@ -22,7 +22,7 @@ This simple Java program is designed to:
 
 1. Print a diamond made of characters in the command console.
 
-[Run](https://www.programiz.com/online-compiler/1K0gM4n0r1dtK) :arrow_forward:
+[Run](https://onlinegdb.com/0Lz96T_YEJ) :arrow_forward:
 
 Technologies Used:
 

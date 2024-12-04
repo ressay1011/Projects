@@ -6,7 +6,7 @@ Este programa Java básico se encarga de:
 
 Calcular el precio correcto por kilo del producto "Pernil Iberic D'Engreix Llen. Azuaga"
 
-[Ejecutar]() :arrow_forward:
+[Ejecutar](https://onlinegdb.com/7EVEGVDXn) :arrow_forward:
 
 Tecnologías Utilizadas:
 
@@ -22,7 +22,7 @@ This simple Java program is designed to:
 
 Calculate the correct price per kilogram of the product "Pernil Iberic D'Engreix Llen. Azuaga."
 
-[Run]() :arrow_forward:
+[Run](https://onlinegdb.com/7EVEGVDXn) :arrow_forward:
 
 Technologies Used:
 

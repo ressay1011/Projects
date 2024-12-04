@@ -8,7 +8,7 @@ Este programa Java básico se encarga de:
 2. Leer el nombre introducido desde la consola.
 3. Mostrar el nombre en la consola junto a la frase hola [nombre], bienvenido al curso de programación en Java!!! .
 
-[Ejecutar](https://www.programiz.com/online-compiler/7pgS2rWKWYm0S) :arrow_forward:
+[Ejecutar](https://onlinegdb.com/jzzTnaut-) :arrow_forward:
 
 ## Tecnologías Utilizadas:
 
@@ -26,7 +26,7 @@ This simple Java program is designed to:
 2. Read the entered name from the console.
 3. Display the name on the console along with the greeting "Hello [name], welcome to the Java programming course!!!.
 
-[Run](https://www.programiz.com/online-compiler/7pgS2rWKWYm0S) :arrow_forward:
+[Run](https://onlinegdb.com/jzzTnaut-) :arrow_forward:
 
 ## Technologies Used:
 
