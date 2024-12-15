@@ -1,21 +1,19 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
 :root {
   --color-primario: #02d66c;
   --color-segundario: #333333;
   --color-terciario: #eeeeee;
   --color-cuaternario: #777777;
 
-  --font-placeholder-size: 1.2em;
-  --font-placeholder-family: "Roboto", sans-serif;
-  --font-placeholder-weight: 300;
-  --font-buttons-size: 1em;
-  --font-buttons-family: "Roboto", sans-serif;
-  --font-buttons-weight: 400;
-  --font-title-size: 4em;
-  --font-title-family: "Roboto", sans-serif;
-  --font-title-weight: 500;
-  --font-subtitle-size: 2em;
-  --font-subtitle-family: "Lato", sans-serif;
-  --font-subtitle-weight: 700;
+  --font-Roboto: "Roboto", sans-serif;
+  --font-Lato: "Lato", sans-serif;
+
+  --font-title1-size: 4em;
+  --font-title2-size: 2em;
+  --font-title3-size: 1.3em;
+  --font-text-size: 1em;
+
+  --font-light-weight: 300;
+  --font-normal-weight: 400;
+  --font-medium-weight: 500;
+  --font-bold-weight: 700;
 }

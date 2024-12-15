@@ -14,10 +14,10 @@
     <title>Reptolon</title>
   </head>
   <body class="body">
-    <header class="header container-fluid">
-      <nav class="navbar navbar-expand-sm">
-        <div class="container">
-          <a class="navbar-brand" href="./index.html"
+    <header class="container-fluid" id="header">
+      <nav class="navbar navbar-expand-md">
+        <div class="container d-flex" id="header-container">
+          <a class="navbar-brand" id="logo" href="./index.html"
             ><img src="./img/Logo.png" alt="Logo Reptolon" width="70px"
           /></a>
           <button
@@ -29,165 +29,327 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <form class="d-flex my-2 my-lg-0 mx-auto" id="form-search">
+            <form class="d-flex my-2 mx-auto mx-md-5" id="form-search">
               <input
-                class="form-control me-sm-2"
+                class="form-control"
                 id="input-search"
                 type="search"
                 placeholder="¿Que necesitas hoy?"
               />
-              <button class="btn my-2 my-sm-0" id="btn-search" type="submit">
-                <i class="bi-search"></i>
+              <button class="btn" id="btn-search" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
-            <div class="ms-auto">
-              <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="./login.html"
-                    ><button class="btn btn-light" id="btn-login">
-                      Entrar<i class="bi-box-arrow-in-right"></i></button
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./register.html"
-                    ><button class="btn btn-dark" id="btn-register">
-                      Registrarse
-                    </button>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <ul class="navbar-nav" id="btn-authentication">
+              <li class="nav-item">
+                <a class="nav-link" href="#login"
+                  ><button
+                    class="btn btn-light w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    id="btn-login"
+                  >
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>Entrar
+                  </button></a
+                >
+              </li>
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content" id="modal-login">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                        Iniciar Sesión
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="email" class="form-label"
+                            >Correo electrónico</label
+                          >
+                          <input type="email" class="form-control" id="email" />
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label"
+                            >Contraseña</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                          />
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="checkRemember"
+                          />
+                          <label class="form-check-label" for="checkRemember"
+                            >Remember me</label
+                          >
+                        </div>
+                        <a class="link-f-password" href="#"
+                          >¿Olvidaste tu contraseña?</a
+                        >
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-light"
+                        data-bs-dismiss="modal"
+                      >
+                        CANCELAR
+                      </button>
+                      <button type="button" class="btn btn-dark">ENTRAR</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link" href="./register.html"
+                  ><button class="btn btn-dark w-100" id="btn-register">
+                    Registrarse
+                  </button>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="main container-fluid">
-      <div class="" id="hero">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="./img/hero.png"
-              class="d-block w-100"
-              id="hero-img"
-              alt="imagen de freelancers"
-            />
-          </div>
-        </div>
-        <div class="container" id="hero-titles">
+    <section class="container-fluid">
+      <div class="d-flex hero" id="hero">
+        <img
+          src="./img/hero.png"
+          class="img-fluid"
+          id="hero-img"
+          alt="imagen de freelancers"
+        />
+        <div class="container-fluid d-flex" id="hero-titles">
           <h1 id="title">Reptolon</h1>
           <h2 id="subtitle">Conectando profesionales y clientes</h2>
         </div>
       </div>
-      <div class="container d-block w-100 my-4">
+    </section>
+    <main class="main container-fluid">
+      <div class="d-block w-100 my-4">
         <h3 id="section-title">Servicios</h3>
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card">
-            <img
-              src="./img/servicios.jpg"
-              class="card-img-top"
-              alt="Servicios de Reptolon"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+      <div class="container-fluid d-flex" id="card-container">
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-5">
+              <img
+                class="img-fluid h-100 card-img"
+                src="./img/servicios.jpg"
+                alt="servicios de reptolon"
+              />
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <h4 class="card-title">Carpintería</h4>
+                <p class="card-text text-truncate">
+                  Descripción del servicio.Descripción del servicio. Descripción
+                  del servicio.Descripción del servicio.Descripción del
+                  servicio. Descripción del servicio.Descripción del
+                  servicio.Descripción del servicio.
+                </p>
+                <a
+                  href="./professionals.html"
+                  class="btn btn-dark btn-md card-button"
+                  >Ver Profesionales</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="./img/servicios.jpg"
-              class="card-img-top"
-              alt="Servicios de Reptolon"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-5">
+              <img
+                class="img-fluid h-100 card-img"
+                src="./img/servicios.jpg"
+                alt="servicios de reptolon"
+              />
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <h4 class="card-title">Carpintería</h4>
+                <p class="card-text text-truncate">
+                  Descripción del servicio.Descripción del servicio. Descripción
+                  del servicio.Descripción del servicio.Descripción del
+                  servicio. Descripción del servicio.Descripción del
+                  servicio.Descripción del servicio.
+                </p>
+                <a
+                  href="./professionals.html"
+                  class="btn btn-dark btn-md card-button"
+                  >Ver Profesionales</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="./img/servicios.jpg"
-              class="card-img-top"
-              alt="Servicios de Reptolon"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content.
-              </p>
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-5">
+              <img
+                class="img-fluid h-100 card-img"
+                src="./img/servicios.jpg"
+                alt="servicios de reptolon"
+              />
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <h4 class="card-title">Carpintería</h4>
+                <p class="card-text text-truncate">
+                  Descripción del servicio.Descripción del servicio. Descripción
+                  del servicio.Descripción del servicio.Descripción del
+                  servicio. Descripción del servicio.Descripción del
+                  servicio.Descripción del servicio.
+                </p>
+                <a
+                  href="./professionals.html"
+                  class="btn btn-dark btn-md card-button"
+                  >Ver Profesionales</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="./img/servicios.jpg"
-              class="card-img-top"
-              alt="Servicios de Reptolon"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-5">
+              <img
+                class="img-fluid h-100 card-img"
+                src="./img/servicios.jpg"
+                alt="servicios de reptolon"
+              />
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <h4 class="card-title">Carpintería</h4>
+                <p class="card-text text-truncate">
+                  Descripción del servicio.Descripción del servicio. Descripción
+                  del servicio.Descripción del servicio.Descripción del
+                  servicio. Descripción del servicio.Descripción del
+                  servicio.Descripción del servicio.
+                </p>
+                <a
+                  href="./professionals.html"
+                  class="btn btn-dark btn-md card-button"
+                  >Ver Profesionales</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="./img/servicios.jpg"
-              class="card-img-top"
-              alt="Servicios de Reptolon"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-5">
+              <img
+                class="img-fluid h-100 card-img"
+                src="./img/servicios.jpg"
+                alt="servicios de reptolon"
+              />
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <h4 class="card-title">Carpintería</h4>
+                <p class="card-text text-truncate">
+                  Descripción del servicio.Descripción del servicio. Descripción
+                  del servicio.Descripción del servicio.Descripción del
+                  servicio. Descripción del servicio.Descripción del
+                  servicio.Descripción del servicio.
+                </p>
+                <a
+                  href="./professionals.html"
+                  class="btn btn-dark btn-md card-button"
+                  >Ver Profesionales</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img
-              src="./img/servicios.jpg"
-              class="card-img-top"
-              alt="Servicios de Reptolon"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-5">
+              <img
+                class="img-fluid h-100 card-img"
+                src="./img/servicios.jpg"
+                alt="servicios de reptolon"
+              />
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <h4 class="card-title">Carpintería</h4>
+                <p class="card-text text-truncate">
+                  Descripción del servicio.Descripción del servicio. Descripción
+                  del servicio.Descripción del servicio.Descripción del
+                  servicio. Descripción del servicio.Descripción del
+                  servicio.Descripción del servicio.
+                </p>
+                <a
+                  href="./professionals.html"
+                  class="btn btn-dark btn-md card-button"
+                  >Ver Profesionales</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <div id="container-footer">
+      <footer class="container d-flex py-3 mt-4" id="footer">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="./index.html" class="mb-0 me-2 text-decoration-none">
+            <img src="./img/Logo.png" alt="logo Reptolon" width="50px" />
+          </a>
+          <span class="mb-0">© 2024 Yasser & Isaac</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="#" class="text-decoration-none"
+              ><i class="fa-brands fa-x-twitter text-footer"></i
+            ></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-decoration-none" href="#"
+              ><i class="fa-brands fa-instagram text-footer"></i
+            ></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-decoration-none" href="#"
+              ><i class="fa-brands fa-facebook-f text-footer"></i
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/bfcb621a62.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

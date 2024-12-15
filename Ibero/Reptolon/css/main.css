@@ -1,6 +1,10 @@
 @import "vars.css";
 
-.header {
+.body {
+  background-color: var(--color-terciario);
+}
+
+#header {
   background: radial-gradient(
     circle,
     var(--color-primario) 0%,
@@ -8,14 +12,24 @@
   );
 }
 
-.body {
-  background-color: var(--color-terciario);
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.fa-bars {
+  font-size: var(--font-title2-size);
+  color: var(--color-terciario);
 }
 
 #form-search {
   position: relative;
-  height: 40px;
-  width: 30em;
+  flex-grow: 1;
+  margin: 0 10%;
+  align-content: center;
 }
 
 #input-search {
@@ -24,66 +38,116 @@
   border-width: 1px;
 }
 
-#input-search::placeholder {
-  color: var(--color-primario);
-  font-size: var(--font-placeholder-size);
-  font-family: var(--font-placeholder-family);
-  font-weight: var(--font-placeholder-weight);
-  text-align: center;
+#input-search:focus {
+  box-shadow: none;
 }
 
-#btn-search {
-  position: absolute;
-  right: 0;
-  color: var(--color-segundario);
-  font-size: var(--font-placeholder-size);
-  font-family: var(--font-placeholder-family);
-  font-weight: var(--font-placeholder-weight);
+#input-search::placeholder {
+  color: var(--color-primario);
+  font-size: var(--font-title3-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-light-weight);
+  text-align: center;
 }
 
 #input-search:not(:placeholder-shown) {
   z-index: 1;
 }
 
+#btn-search {
+  position: absolute;
+  right: 0;
+  padding: 3px 10px;
+  color: var(--color-segundario);
+  font-size: var(--font-title3-size);
+  border: none;
+}
+
 #btn-login {
   padding: 8px;
-  font-size: var(--font-buttons-size);
-  font-family: var(--font-buttons-family);
-  font-weight: var(--font-buttons-weight);
+  font-size: var(--font-text-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-normal-weight);
+  text-transform: uppercase;
+}
+
+.fa-arrow-right-to-bracket {
+  color: var(--color-segundario);
+  font-size: var(--font-text-size);
+  margin-right: 3px;
+}
+
+#modal-login {
+  background: linear-gradient(
+    var(--color-terciario) 0%,
+    var(--color-primario) 100%
+  );
+}
+
+.modal-header {
+  border-color: var(--color-primario);
+}
+
+.modal-title {
+  font-size: var(--font-text-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-medium-weight);
+  text-transform: uppercase;
+}
+
+.modal-body {
+  font-size: var(--font-text-size);
+  font-family: var(--font-Lato);
+  font-weight: var(--font-normal-weight);
+}
+
+.modal-footer {
+  font-size: var(--font-text-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-medium-weight);
+}
+
+.link-f-password {
+  text-decoration: none;
+  font-size: var(--font-text-size);
+  font-family: var(--font-Lato);
+  font-weight: var(--font-light-weight);
+  color: var(--color-terciario);
   text-transform: uppercase;
 }
 
 #btn-register {
   padding: 8px;
-  font-size: var(--font-buttons-size);
-  font-family: var(--font-buttons-family);
-  font-weight: var(--font-buttons-weight);
+  font-size: var(--font-text-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-normal-weight);
   text-transform: uppercase;
-}
-
-.carousel-inner {
-  max-height: 20rem;
 }
 
 #hero {
   position: relative;
+  max-height: 18rem;
+  overflow: hidden;
 }
 
 #hero-img {
-  opacity: 70%;
+  opacity: 60%;
+  object-fit: cover;
+  object-position: 0 10%;
 }
 
 #hero-titles {
   position: absolute;
-  bottom: 80px;
-  left: 70px;
   text-align: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 #title {
-  font-size: var(--font-title-size);
-  font-family: var(--font-title-family);
-  font-weight: var(--font-title-weight);
+  font-size: var(--font-title1-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-bold-weight);
   color: var(--color-primario);
   -webkit-text-stroke-color: var(--color-segundario);
   -webkit-text-stroke-width: 3px;
@@ -91,10 +155,11 @@
 }
 
 #subtitle {
-  font-size: var(--font-subtitle-size);
-  font-family: var(--font-subtitle-family);
-  font-weight: var(--font-subtitle-weight);
+  font-size: var(--font-title2-size);
+  font-family: var(--font-Lato);
+  font-weight: var(--font-bold-weight);
   color: var(--color-segundario);
+  text-shadow: 2px 2px 5px var(--color-terciario);
   text-transform: uppercase;
 }
 
@@ -106,11 +171,77 @@
   );
   border-radius: 30px;
   text-align: center;
-  font-size: var(--font-subtitle-size);
-  font-family: var(--font-title-family);
-  font-weight: var(--font-title-weight);
+  font-size: var(--font-title2-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-medium-weight);
   color: var(--color-terciario);
-  -webkit-text-stroke-color: var(--color-terciario);
-  -webkit-text-stroke-width: 1px;
   text-transform: uppercase;
+}
+
+#card-container {
+  flex-wrap: wrap;
+}
+
+.card {
+  overflow: hidden;
+  flex-grow: 1;
+  flex-basis: 33%;
+  min-width: 24rem;
+  background: linear-gradient(
+    var(--color-primario) 0%,
+    var(--color-terciario) 100%
+  );
+  margin: 5px;
+}
+
+.card-img {
+  object-fit: cover;
+  object-position: 20% 50%;
+}
+
+.card-title {
+  font-size: var(--font-title3-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-medium-weight);
+  color: var(--color-segundario);
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: var(--font-text-size);
+  font-family: var(--font-Lato);
+  font-weight: var(--font-normal-weight);
+  color: var(--color-segundario);
+}
+
+.card-button {
+  width: 100%;
+  font-size: var(--font-text-size);
+  font-family: var(--font-Roboto);
+  font-weight: var(--font-normal-weight);
+  color: var(--color-primario);
+  text-transform: uppercase;
+}
+
+#container-footer {
+  background: radial-gradient(
+    circle,
+    var(--color-primario) 0%,
+    var(--color-segundario) 100%
+  );
+}
+
+#footer {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-text-size);
+  font-family: var(--font-Lato);
+  font-weight: var(--font-normal-weight);
+  color: var(--color-terciario);
+}
+
+.text-footer {
+  font-size: var(--font-title3-size);
+  color: var(--color-terciario);
 }
