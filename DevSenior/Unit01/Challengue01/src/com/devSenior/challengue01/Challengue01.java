@@ -3,6 +3,8 @@ package com.devSenior.challengue01;
 import java.util.Random;
 import java.util.Scanner;
 
+/// Integrantes Pedro Daniel Ospina Arias y Yasser Daniel Ariza Barrios
+
 public class Challengue01 {
 
     static final String RED = "\u001B[31m";
@@ -14,7 +16,7 @@ public class Challengue01 {
     // Static variables used throughout the project
     static Scanner input = new Scanner(System.in);
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // Selected planet information
         String[] destinationPlanet = { "" };
