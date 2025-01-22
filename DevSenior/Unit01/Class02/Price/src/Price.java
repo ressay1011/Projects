@@ -1,5 +1,5 @@
 public class Price {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         float price; // Store the price
 
         price = (5.95f * 1000) / 100; // Calculate the price by multiplying 1000 by 5.95 and then dividing by 100

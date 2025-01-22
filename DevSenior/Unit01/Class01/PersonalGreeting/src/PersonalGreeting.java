@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class PersonalGreeting {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // Create a Scanner object to receive user input
         Scanner input = new Scanner(System.in);

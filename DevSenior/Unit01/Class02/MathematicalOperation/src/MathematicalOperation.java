@@ -1,5 +1,5 @@
 public class MathematicalOperation {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // Declare and initialize variables for the numbers used in the operation
         int num1 = 6; // The numerator in the division

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Words {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // Import the Scanner class to receive user input
         Scanner input = new Scanner(System.in);

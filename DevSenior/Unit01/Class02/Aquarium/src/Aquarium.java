@@ -1,5 +1,5 @@
 public class Aquarium {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         int redFish = 284; // Number of red fish in the aquarium
         int blueFish = 163; // Number of blue fish in the aquarium
         int sum; // Hold the total number of fish
