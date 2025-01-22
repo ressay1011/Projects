@@ -15,7 +15,6 @@ public abstract class ServicioBase {
     return personalDisponible > 0 && combustibleDisponible > 0;
   }
 
-  @Override
   public void asignarPersonal(int cantidad) {
     if (cantidad <= personalDisponible) {
       personalDisponible -= cantidad;
@@ -24,25 +23,20 @@ public abstract class ServicioBase {
     }
   }
 
-  @Override
   public void removerPersonal(int cantidad) {
     personalDisponible += cantidad;
   }
 
-  @Override
   public void asignarCombustible(int cantidad) {
     combustibleDisponible = Math.max(0, combustibleDisponible - cantidad);
   }
 
-  @Override
   public void removerCombustible(int cantidad) {
     combustibleDisponible += cantidad;
   }
 
-  @Override
   public abstract void atenderEmergencia(Emergencia emergencia);
 
-  @Override
   public abstract void evaluarEstado(Emergencia emergencia);
 
 }

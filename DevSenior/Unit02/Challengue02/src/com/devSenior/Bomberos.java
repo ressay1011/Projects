@@ -1,6 +1,6 @@
 package com.devSenior;
 
-public class Bomberos extends ServicioBase implements IResponderEmergencia {
+public class Bomberos extends ServicioBase {
   public Bomberos(String id, int personalDisponible, int combustibleDisponible) {
     super(id, personalDisponible, combustibleDisponible);
   }
