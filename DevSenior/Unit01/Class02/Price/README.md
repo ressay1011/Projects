@@ -1,29 +1,29 @@
-# Programa: ¿Ves algún error en el precio? :x: :money_mouth_face:
+# 💰 Programa: ¿Ves algún error en el precio?
 
-## Descripción:
+## 📝 Descripción:
 
 Este programa Java básico se encarga de:
 
-Calcular el precio correcto por kilo del producto "Pernil Iberic D'Engreix Llen. Azuaga"
+🎯 Calcular el precio correcto por kilo del producto "Pernil Iberic D'Engreix Llen. Azuaga".
 
-[Ejecutar](https://onlinegdb.com/7EVEGVDXn) :arrow_forward:
+▶️ [Ejecutar](https://onlinegdb.com/7EVEGVDXn)
 
-Tecnologías Utilizadas:
+## 🛠️ Tecnologías Utilizadas:
 
-**Java** :coffee:: Lenguaje de programación utilizado para desarrollar el programa.
+- **Java** ☕: Lenguaje de programación utilizado para desarrollar el programa.
 
-#
+---
 
-# Program: Do you see any error in the price? :x: :money_mouth_face:
+# 💰 Program: Do you see any error in the price?
 
-## Description:
+## 📝 Description:
 
 This simple Java program is designed to:
 
-Calculate the correct price per kilogram of the product "Pernil Iberic D'Engreix Llen. Azuaga."
+🎯 Calculate the correct price per kilogram of the product "Pernil Iberic D'Engreix Llen. Azuaga."
 
-[Run](https://onlinegdb.com/7EVEGVDXn) :arrow_forward:
+▶️ [Run](https://onlinegdb.com/7EVEGVDXn)
 
-Technologies Used:
+## 🛠️ Technologies Used:
 
-**Java** :coffee:: Programming language used to develop the program.
+- **Java** ☕: Programming language used to develop the program.

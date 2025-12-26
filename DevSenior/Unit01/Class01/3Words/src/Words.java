@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
+/**
+ * 3-Word Reader.
+ * This class prompts the user to enter three separate words,
+ * validates the input to ensure only letters are entered,
+ * and then displays the concatenated words.
+ */
 public class Words {
+    /**
+     * Main entry point of the program.
+     * Manages user input, validation, and concatenation of words.
+     * 
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
 
         // Import the Scanner class to receive user input

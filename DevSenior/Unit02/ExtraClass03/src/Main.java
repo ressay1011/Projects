@@ -1,6 +1,17 @@
 import java.util.Scanner;
 
+/**
+ * Main class to demonstrate the Payment Method system.
+ * This application allows users to select a payment method, enter an amount,
+ * and processes the transaction using polymorphism through the
+ * {@link MetodoPago} interface.
+ */
 public class Main {
+    /**
+     * Entry point of the payment demonstration system.
+     * 
+     * @param args Command line arguments.
+     */
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
@@ -95,11 +106,25 @@ public class Main {
         } while (!metodoPago.validarMonto(monto));
     }
 
+    /**
+     * Overloaded method to verify if a string is a valid integer.
+     * 
+     * @param respuesta The string to verify.
+     * @return true if valid.
+     */
     public static boolean verificarNum(String respuesta) {
         String[] opciones = { " " };
         return verificarNum(respuesta, opciones);
     }
 
+    /**
+     * Verifies if a string is a valid integer and within the range of options.
+     * 
+     * @param respuesta The string to verify.
+     * @param opciones  An array of valid label options.
+     * @return true if matches or if options are empty but string is a valid
+     *         integer.
+     */
     public static boolean verificarNum(String respuesta, String[] opciones) {
         var verificacion = true;
 

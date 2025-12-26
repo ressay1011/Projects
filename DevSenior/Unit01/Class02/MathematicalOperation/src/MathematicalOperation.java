@@ -1,4 +1,17 @@
+/**
+ * Mathematical Operation Challenge.
+ * This class solves the mathematical expression {@code 6/2(1+2)} and explains
+ * the results from both correct and incorrect approaches based on the order
+ * of operations (PEMDAS/BODMAS).
+ */
 public class MathematicalOperation {
+    /**
+     * Main entry point of the program.
+     * Executes the mathematical steps for both order-of-operation scenarios
+     * and prints an educational summary.
+     * 
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
 
         // Declare and initialize variables for the numbers used in the operation

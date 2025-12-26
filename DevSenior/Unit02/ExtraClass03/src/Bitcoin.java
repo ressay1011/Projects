@@ -1,15 +1,30 @@
+/**
+ * Payment method implementation for Bitcoin.
+ * Implements the {@link MetodoPago} interface for cryptocurrency transactions.
+ */
 public class Bitcoin implements MetodoPago {
 
+    /** The public wallet address. */
     private String billetera;
+    /** The current BTC price in USD. */
     private double btc;
+    /** The calculated value of the transaction in BTC. */
     private double valor;
 
+    /**
+     * Default constructor initializing Bitcoin with a sample wallet and base price.
+     */
     public Bitcoin() {
         this.billetera = "0x345632D3S43f5CVVD5Nv3XC3asda21sfdasdv";
         this.btc = 100000;
         this.valor = 0;
     }
 
+    /**
+     * Gets the wallet address.
+     * 
+     * @return The wallet string.
+     */
     public String getBilletera() {
         return billetera;
     }
@@ -34,6 +49,11 @@ public class Bitcoin implements MetodoPago {
         this.valor = valor;
     }
 
+    /**
+     * Executes the Bitcoin payment processing log.
+     * 
+     * @param monto The USD amount to process.
+     */
     @Override
     public void procesarPago(double monto) {
         System.out.printf(

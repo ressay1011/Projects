@@ -1,15 +1,31 @@
+/**
+ * Payment method implementation for Gift Cards.
+ * Implements the {@link MetodoPago} interface for prepaid gift card
+ * transactions.
+ */
 public class TarjetaRegalo implements MetodoPago {
 
+    /** The unique gift card code. */
     private long codigoTarjeta;
+    /** The original balance on the card. */
     private double saldo;
+    /** The remaining balance after a transaction. */
     private double nuevoSaldo;
 
+    /**
+     * Default constructor for TarjetaRegalo with sample data.
+     */
     public TarjetaRegalo() {
         this.codigoTarjeta = 1234567890123456l;
         this.saldo = 500;
         this.nuevoSaldo = 0;
     }
 
+    /**
+     * Gets the gift card code.
+     * 
+     * @return The card code.
+     */
     public long getCodigoTarjeta() {
         return codigoTarjeta;
     }

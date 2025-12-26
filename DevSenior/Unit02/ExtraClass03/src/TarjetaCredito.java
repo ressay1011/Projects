@@ -1,12 +1,26 @@
+/**
+ * Payment method implementation for Credit Cards.
+ * Implements the {@link MetodoPago} interface for credit/debit card
+ * transactions.
+ */
 public class TarjetaCredito implements MetodoPago {
 
+    /** The full credit card number. */
     private long numTarjeta;
+    /** The type of card (e.g., Visa, MasterCard). */
     private String tipo;
+    /** The expiration month. */
     private int mesVencimiento;
+    /** The expiration year. */
     private int anioVencimiento;
+    /** The Card Verification Value (security code). */
     private int cvv;
+    /** The name of the cardholder. */
     private String nombreTarjeta;
 
+    /**
+     * Default constructor for TarjetaCredito with sample data.
+     */
     public TarjetaCredito() {
         this.numTarjeta = 5348723492128476l;
         this.tipo = "MasterCard";
@@ -16,6 +30,11 @@ public class TarjetaCredito implements MetodoPago {
         this.nombreTarjeta = "Darwin";
     }
 
+    /**
+     * Gets the credit card number.
+     * 
+     * @return The card number.
+     */
     public long getNumTarjeta() {
         return numTarjeta;
     }

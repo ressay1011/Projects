@@ -3,19 +3,35 @@ package com.devSenior.challengue01;
 import java.util.Random;
 import java.util.Scanner;
 
-/// Integrantes Pedro Daniel Ospina Arias y Yasser Daniel Ariza Barrios
-
+/**
+ * Interplanetary Travel Simulator.
+ * This program allows users to select a destination planet and a spaceship,
+ * and then simulates the journey, displaying progress and random space events.
+ * 
+ * Authors: Pedro Daniel Ospina Arias and Yasser Daniel Ariza Barrios
+ */
 public class Challengue01 {
 
+    /** ANSI escape code for red text color. */
     static final String RED = "\u001B[31m";
+    /** ANSI escape code for green text color. */
     static final String GREEN = "\u001B[32m";
+    /** ANSI escape code for yellow text color. */
     static final String YELLOW = "\u001B[33m";
+    /** ANSI escape code for blue text color. */
     static final String BLUE = "\u001B[34m";
+    /** ANSI escape code to reset text formatting. */
     static final String RESET = "\u001B[0m";
 
-    // Static variables used throughout the project
+    /** Scanner object for user input across the class. */
     static Scanner input = new Scanner(System.in);
 
+    /**
+     * Main entry point of the application.
+     * Manages the main menu loop and high-level program flow.
+     * 
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
 
         // Selected planet information
@@ -28,7 +44,7 @@ public class Challengue01 {
         // distance to the selected planet
         var travelDuration = 0d;
 
-        // Error menssage to display in the menu
+        // Error message to display in the menu
         var errorMsg = "";
 
         var fix = "=";
@@ -37,8 +53,8 @@ public class Challengue01 {
         while (true) {
             int option;
 
-            // Validación de si hay una nave seleccionada y un planeta seleccionado para
-            // calcular la duración del viaje
+            // Check if both a spaceship and a planet are selected to calculate travel
+            // duration
             if (!destinationPlanet[0].isBlank() && !selectedSpaceShip[0].isBlank()) {
                 travelDuration = calTravelDuration(destinationPlanet[1], selectedSpaceShip[1]);
             }
@@ -47,29 +63,28 @@ public class Challengue01 {
 
             switch (option) {
 
-                // Opcion 0 - Salir del programa
+                // Option 0 - Exit the program
                 case 0:
                     System.out.printf("%2$s%4$s%3$s%n%1$sExiting the program...%3$s", BLUE, GREEN, RESET, fix);
                     System.exit(0);
                     break;
 
-                // Opcion 1 - Seleccionar planeta de destino
+                // Option 1 - Select destination planet
                 case 1:
                     destinationPlanet = menuDestinationPlanet(destinationPlanet);
                     errorMsg = "";
                     break;
 
-                // Opcion 2 - Seleccionar nave
+                // Option 2 - Select spaceship
                 case 2:
                     selectedSpaceShip = menuSpaceShip(selectedSpaceShip);
                     errorMsg = "";
                     break;
 
-                // Opcion 3 - Iniciar viaje
+                // Option 3 - Start travel
                 case 3:
 
-                    // Validación de si hay una nave seleccionada y un planeta seleccionado para
-                    // poder iniciar el viaje
+                    // Validation to ensure both components are selected before starting simulation
                     if (!destinationPlanet[0].isBlank() && !selectedSpaceShip[0].isBlank()) {
                         calTravelProgress(destinationPlanet, selectedSpaceShip, travelDuration);
                         errorMsg = "";
@@ -82,21 +97,32 @@ public class Challengue01 {
                     }
                     break;
 
-                // El programa en su curso normal nunca deberia llegar aca
+                // Fallback case (should not be reached)
                 default:
-                    System.out.println("Como rayos llegaste aqui?");
-                    // Con fé XD
+                    System.out.println("How did you get here?");
                     break;
             }
         }
     }
 
-    // Metodo que crea el menu al pasarle un array de opciones y devuelve el valor
-    // seleccionado una vez verificado
+    /**
+     * Displays a menu and returns the user's numeric choice.
+     * 
+     * @param options An array of string options to be displayed.
+     * @return The integer selected by the user.
+     */
     private static int showMenu(String[] options) {
         return showMenu(options, "");
     }
 
+    /**
+     * Displays a menu with an optional error message and returns the user's choice.
+     * 
+     * @param options  An array of string options to be displayed.
+     * @param errorMsg An error message to display if the previous selection was
+     *                 invalid.
+     * @return The valid integer selected by the user.
+     */
     private static int showMenu(String[] options, String errorMsg) {
         var optionsTemp = "";
         var nOptions = options.length;
@@ -112,7 +138,7 @@ public class Challengue01 {
             i = 0;
             selectionTemp = 0;
 
-            // Crea el logo
+            // Display Logo
             System.out.printf("%1$s               _____ ____  ___   ____________%n"
                     + "              / ___// __ \\/   | / ____/ ____/%n"
                     + "              \\__ \\/ /_/ / /| |/ /   / __/%n"
@@ -124,7 +150,7 @@ public class Challengue01 {
                     + "/____/___/_/  /_/\\____/_____/_/  |_/_/  \\____/_/ |_|%n%4$s%3$s%n", RED, GREEN, RESET,
                     fix);
 
-            // Crea las opciones asignandole a la ultima el numero 0.
+            // Generate options, mapping the last one to number 0
             for (String option : options) {
                 if (i != (nOptions - 1)) {
                     optionsTemp = optionsTemp
@@ -136,7 +162,7 @@ public class Challengue01 {
                 i = i + 1;
             }
 
-            // Agrega el mensaje de error al menu en caso de haberlo.
+            // Append error message if exists
             if (error = true) {
                 optionsTemp = optionsTemp.concat("%3$s" + errorMsg + "%2$s");
                 error = false;
@@ -147,8 +173,7 @@ public class Challengue01 {
 
             System.out.printf(optionsTemp, GREEN, BLUE, RED, RESET, fix);
 
-            // Valida si la opcion seleccionada es valida, si es un numero y si esta en el
-            // rango permitido.
+            // Validate input: must be an integer within range
             if (input.hasNextInt()) {
                 selectionTemp = input.nextInt();
                 if (selectionTemp >= 0 & selectionTemp <= (nOptions - 1)) {
@@ -161,60 +186,68 @@ public class Challengue01 {
                 error = true;
                 errorMsg = "%3$s%5$s%nError: Please enter a number from 0 to " + (nOptions - 1) + ".%4$s%n";
             }
-            input.nextLine(); // Limpiar buffer
+            input.nextLine(); // Clear buffer
         }
         return selection;
     }
 
-    // Metodo que crea el menu principal y retorna la opcion seleccionada
+    /**
+     * Constructs and manages the main menu display logic.
+     * 
+     * @param destinationPlanet The name of the selected destination planet.
+     * @param selectedSpaceShip An array containing selected spaceship details.
+     * @param travelDuration    Calculated travel duration in days.
+     * @param errorMsg          Any error message to be displayed in the menu.
+     * @return The user's menu selection.
+     */
     private static int mainMenu(String destinationPlanet, String[] selectedSpaceShip, double travelDuration,
             String errorMsg) {
 
-        // Guarda la selección del usuario para posteriormente retornarla.
         int selection;
 
-        // Define las opciones que se muestran en el menu principal.
+        // Define main menu options
         String[] options = {
                 "Select destination planet",
                 "Select spaceship",
                 "Start the travel simulation",
                 "Exit the program" };
 
-        // Valida si hay un planeta seleccionado para mostrar el nombre del planeta.
+        // Show planet name if selected
         if (!destinationPlanet.isBlank()) {
             options[0] = options[0].concat(String.format("%1$s (%2$s)%3$s", BLUE, destinationPlanet, RESET));
         }
 
-        // Valida si hay una nave seleccionada para mostrar el nombre de la nave y el
-        // numero de pasajeros.
+        // Show spaceship name and passenger count if selected
         if (!selectedSpaceShip[0].isBlank()) {
             options[1] = options[1]
                     .concat(String.format("%1$s (%2$s: %3$,d Passengers)%4$s", BLUE, selectedSpaceShip[0],
                             Integer.parseInt(selectedSpaceShip[3]), RESET));
         }
 
-        // Valida si hay un planeta y una nave seleccionados para mostrar la duracion
-        // del viaje en dias.
+        // Show travel duration in days if both are selected
         if (!selectedSpaceShip[0].isBlank() && !destinationPlanet.isBlank()) {
-            options[2] = options[2].concat(String.format("%1$s (%2$,.0f Dias)%3$s", BLUE, travelDuration, RESET));
+            options[2] = options[2].concat(String.format("%1$s (%2$,.0f Days)%3$s", BLUE, travelDuration, RESET));
         }
 
-        // Se crea y imprime el menu
         selection = showMenu(options, errorMsg);
 
         return selection;
     }
 
-    // Metodo que crea el menu de seleccion de planeta destino y retorna la
-    // información del planeta seleccionado
+    /**
+     * Displays the planet selection menu and processes the user's choice.
+     * 
+     * @param destinationPlanet The currently selected destination planet
+     *                          information.
+     * @return An updated array with information for the newly selected planet.
+     */
     private static String[] menuDestinationPlanet(String[] destinationPlanet) {
 
-        // Define los planetas que se muestran en el menu de seleccion de planetas.
         String[] planets = { "Mercury", "Venus", "Mars", "Jupiter", "Saturn",
                 "Uranus", "Neptune" };
         int selection;
 
-        // Se agrega a las opciones del menu la opcion de volver al menu anterior.
+        // Add back option
         String[] options = new String[(planets.length + 1)];
 
         for (var i = 0; i < planets.length; i++) {
@@ -223,27 +256,29 @@ public class Challengue01 {
 
         options[planets.length] = "Back";
 
-        // Se crea y imprime el menu de seleccion de planetas
         selection = showMenu(options);
 
-        // Valida si la opcion seleccionada es diferente de 0
         if (selection != 0) {
-
-            // Guarda la información del planeta seleccionado para su posterior retorno
+            // Get selected planet details
             destinationPlanet = destinationPlanet(selection, planets);
         }
 
         return destinationPlanet;
     }
 
-    // Metodo que recibe el planeta seleccionado y la lista de planetas disponibles,
-    // muestra por consola la informacion del planeta y la retorna
+    /**
+     * Provides detailed information about a selected planet.
+     * 
+     * @param option  The numeric option corresponding to the selected planet.
+     * @param planets The list of available planets.
+     * @return An array containing the planet's name and its distance from Earth.
+     */
     private static String[] destinationPlanet(int option, String[] planets) {
 
-        // Guarda la distancia de la tierra a los planetas en millones de kilometros.
+        // Distance from Earth in million kilometers
         String[] planetDistance = { "91", "41", "225", "778", "1429", "2900", "4300" };
 
-        // Guarda la descripción de los planetas.
+        // Descriptive text for each planet
         String[] planetDescription = {
                 "is the smallest and closest planet to the Sun.%nIt has a rocky surface with extreme temperature changes, ranging from -180°C at night to 430°C during the day.%nIt orbits the Sun in just 88 days.",
                 "is the second planet from the Sun and similar in size to Earth.%nIt has a thick, toxic atmosphere primarily made of carbon dioxide, which creates a runaway greenhouse effect, making it the hottest planet in the solar system.%nSurface temperatures can reach up to 470°C.%nVenus has no moons and rotates in the opposite direction to most planets, with a day longer than its year.",
@@ -254,31 +289,32 @@ public class Challengue01 {
                 "is the eighth and farthest planet from the Sun.%nIt is an ice giant with a deep blue color due to methane in its atmosphere.%nNeptune has strong winds, the fastest in the solar system, and large storm systems, including the Great Dark Spot.%nIt has 14 known moons, with Triton being the largest, and five rings.%nIts atmosphere is mostly hydrogen, helium, and methane."
         };
 
-        // Se crea un nuevo String con la información a retornar. (Nombre del planeta y
-        // distancia desde la tierra)
         String[] destinationPlanetInfo = new String[2];
         destinationPlanetInfo[0] = planets[option - 1];
         destinationPlanetInfo[1] = planetDistance[option - 1];
 
-        // Imprime la información del planeta seleccionado
+        // Print selected planet information
         System.out.printf(
                 "%4$sThe selected planet is:%6$s %1$s located approximately %2$,d million kilometers from Earth %3$s%n%5$sPress enter to continue.%6$s",
                 destinationPlanetInfo[0], Integer.parseInt(destinationPlanetInfo[1]),
                 planetDescription[option - 1], GREEN, BLUE, RESET);
-        input.nextLine(); // Gasta el enter
+        input.nextLine();
 
         return destinationPlanetInfo;
     }
 
-    // Metodo que crea el menu de seleccion de naves y retorna información de la
-    // nave seleccionada
+    /**
+     * Displays the spaceship selection menu and processes the user's choice.
+     * 
+     * @param selectedSpaceShip The currently selected spaceship information.
+     * @return An updated array with information for the newly selected spaceship.
+     */
     private static String[] menuSpaceShip(String[] selectedSpaceShip) {
 
-        // Define las naves que se muestran en el menu de seleccion de naves.
         String[] spaceShips = { "Red dwarf", "Discovery", "Millennium falcon" };
         int selection = -1;
 
-        // Se agrega a las opciones del menu la opcion de volver al menu anterior.
+        // Add back option
         String[] options = new String[(spaceShips.length + 1)];
 
         for (var i = 0; i < spaceShips.length; i++) {
@@ -288,14 +324,10 @@ public class Challengue01 {
         options[spaceShips.length] = "Back";
 
         do {
-
-            // imprime el menu de selección de la nave.
             selection = showMenu(options);
 
-            // Valida si la opcion seleccionada es diferente de 0.
             if (selection != 0) {
-
-                // Guarda la información de la nave seleccionada para posteriormente retornarla.
+                // Confirm selection and get ship details
                 selectedSpaceShip = selectedSpaceShip(selection, spaceShips, selectedSpaceShip);
             }
         } while (selection != 0 && selectedSpaceShip[0].isBlank());
@@ -303,48 +335,42 @@ public class Challengue01 {
         return selectedSpaceShip;
     }
 
-    /*
-     * Metodo que recibe la nave seleccionada y la lista de naves disponible,
-     * imprime la informacion de la nave para posteriormente retornarla y le pide al
-     * usuario la cantidad de pasajeros a viajar.
+    /**
+     * Handles the specific logic for selecting and configuring a chosen spaceship.
+     * Includes asking the user for the number of passengers.
+     * 
+     * @param option            The numeric option corresponding to the selected
+     *                          spaceship.
+     * @param spaceShips        The list of available spaceships.
+     * @param selectedSpaceShip The previously selected spaceship information.
+     * @return The newly selected and configured spaceship information.
      */
     private static String[] selectedSpaceShip(int option, String[] spaceShips, String[] selectedSpaceShip) {
 
-        // Variable temporal para confirmar la seleccion de la nave
         var confirmation = "";
 
-        // Datos de la nave
-        // Velocidad maxima de cada una de las 3 naves en Km/h
+        // Max speed of the ships in Km/h
         String[] spaceShipsMaxVel = { "36400", "28000", "42000" };
 
-        // Capacidad maxima de cada una de las 3 naves (numero recomendado de pasajeros)
+        // Max capacity of the ships
         String[] spaceShipsMaxCapacity = { "10", "25", "5" };
 
-        // Guarda el numero de pasajeros que viajan como un String para su posterior
-        // procesamiento
         var spaceShipsCapacity = "";
-
-        // Variable que guarda temporalmente el numero de pasajeros para realizar las
-        // validaciones
         var passengersTemp = 0;
 
-        // Se guarda toda la información de la nave seleccionada en el array a retornar
         String[] tempSelectedSpaceShip = new String[4];
         tempSelectedSpaceShip[0] = spaceShips[option - 1];
         tempSelectedSpaceShip[1] = spaceShipsMaxVel[option - 1];
         tempSelectedSpaceShip[2] = spaceShipsMaxCapacity[option - 1];
 
         do {
-
-            // Imprime por consola la información de la nave seleccionada
+            // Display selected spaceship information
             System.out.printf(
                     "%4$sThe selected spaceship is:%6$s %1$s %n- Velocity: %2$,d KM/H%n- Max.Capacity: %3$s Passengers"
                             + "%n%5$sDo you want to select this spaceship(Y/n): %6$s",
                     tempSelectedSpaceShip[0], Integer.parseInt(tempSelectedSpaceShip[1]), tempSelectedSpaceShip[2],
                     GREEN, BLUE, RESET);
 
-            // Se confirma la seleccion de la nave si es n (no) se devuelve a la seleccion
-            // de nave
             confirmation = input.nextLine();
 
             if (confirmation.matches("[Nn]")) {
@@ -358,9 +384,7 @@ public class Challengue01 {
                 "%2$sSpaceship %1$s successfully selected.%3$s %n",
                 tempSelectedSpaceShip[0], GREEN, RESET);
 
-        // Se pregunta por el numero de pasajeros a viajar, se valida que sea un numero
-        // positivo y en caso de que el numero ingresado supere el maximo permitido por
-        // la nave seleccionada se muestra una advertencia.
+        // Ask for number of passengers and validate
         while (spaceShipsCapacity.isBlank()) {
             System.out.printf("%1$sPlease enter the number of passengers traveling: %2$s", BLUE, RESET);
 
@@ -371,7 +395,7 @@ public class Challengue01 {
                     if (passengersTemp > Integer.parseInt(tempSelectedSpaceShip[2])) {
                         System.out.printf(
                                 "%1$sWarning: Spaceship capacity exceeded."
-                                        + "The number of passengers is higher that the recommended limit."
+                                        + "The number of passengers is higher than the recommended limit."
                                         + "%nPlease proceed with caution.%2$s%n%3$sPress enter to continue.%2$s",
                                 YELLOW, RESET, BLUE);
                         input.nextLine();
@@ -386,18 +410,19 @@ public class Challengue01 {
             input.nextLine();
         }
 
-        // Se guarda el numero de pasajeros en el array a retornar
         tempSelectedSpaceShip[3] = spaceShipsCapacity;
-
         selectedSpaceShip = tempSelectedSpaceShip;
 
         return selectedSpaceShip;
-
     }
 
-    // Calcula la duracion del viaje en dias al recibir la distancia del planeta
-    // destino seleccionado y la velocidad de la nave seleccionada y retorna el
-    // resultado.
+    /**
+     * Calculates the estimated travel duration in days based on distance and speed.
+     * 
+     * @param planetDistance  The distance to the destination planet in million KM.
+     * @param spaceShipMaxVel The maximum velocity of the spaceship in KM/H.
+     * @return The calculated travel duration in days.
+     */
     private static double calTravelDuration(String planetDistance, String spaceShipMaxVel) {
 
         var tempPlanetDistance = Double.parseDouble(planetDistance);
@@ -412,6 +437,14 @@ public class Challengue01 {
         return travelDuration;
     }
 
+    /**
+     * Simulates and displays the progress of the interplanetary journey.
+     * 
+     * @param destinationPlanet Array containing name and distance of the
+     *                          destination.
+     * @param selectedSpaceShip Array containing details of the selected spaceship.
+     * @param travelDuration    Total duration of the journey in days.
+     */
     private static void calTravelProgress(String[] destinationPlanet, String[] selectedSpaceShip,
             double travelDuration) {
 
@@ -431,11 +464,11 @@ public class Challengue01 {
                 GREEN, destinationPlanet[0], RESET, fix);
 
         while (days <= travelDuration) {
-            System.out.printf("%1$sEstimated travel duration: %2$,.0f Dias.%5$s(%3$.2f%%)%4$s\r",
+            System.out.printf("%1$sEstimated travel duration: %2$,.0f Days.%5$s(%3$.2f%%)%4$s\r",
                     BLUE, travelDuration - days, temp, generateEvent(), RESET);
 
             if (days == (int) (travelDuration / 2)) {
-                System.out.printf("Halfway through the route: %2$,.0f Dias.%4$s(%3$d%%)       %n",
+                System.out.printf("Halfway through the route: %2$,.0f Days.%4$s(%3$d%%)       %n",
                         BLUE, travelDuration - travelDuration / 2, 50, RESET);
             }
 
@@ -450,7 +483,7 @@ public class Challengue01 {
 
             System.out.printf("                                                            \r");
         }
-        System.out.printf("%1$sEstimated travel duration: %2$.0f Dias.%4$s(%3$d%%): Travel Completed.%n",
+        System.out.printf("%1$sEstimated travel duration: %2$.0f Days.%4$s(%3$d%%): Travel Completed.%n",
                 BLUE, travelDuration - travelDuration, 100, RESET);
         System.out.printf(
                 "%1$s====================== Final Report ======================%2$s%n- Destination Planet: %3$s%n"
@@ -463,6 +496,12 @@ public class Challengue01 {
 
     }
 
+    /**
+     * Generates a random space event during the travel simulation.
+     * 
+     * @return A string describing the random event, or an empty string if no event
+     *         occurs.
+     */
     private static String generateEvent() {
         Random random = new Random();
         double probability = random.nextDouble();

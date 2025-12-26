@@ -1,11 +1,24 @@
+/**
+ * Payment method implementation for PayPal.
+ * Implements the {@link MetodoPago} interface for digital wallet transactions.
+ */
 public class Paypal implements MetodoPago {
 
+    /** The email address associated with the PayPal account. */
     private String email;
 
+    /**
+     * Default constructor for PayPal.
+     */
     public Paypal() {
         this.email = "Darwin@gmail.com";
     }
 
+    /**
+     * Gets the PayPal account email.
+     * 
+     * @return The email string.
+     */
     public String getEmail() {
         return email;
     }

@@ -1,19 +1,30 @@
 package com.devSenior;
 
-public class Bomberos extends ServicioBase implements IResponderEmergencia {
+/**
+ * Firefighters service implementation.
+ * Specializes {@link ServicioBase} for fire-related emergency response.
+ */
+public class Bomberos extends ServicioBase {
+  /**
+   * Constructs a new Bomberos service.
+   * 
+   * @param id                    The service ID.
+   * @param personalDisponible    Available firefighters.
+   * @param combustibleDisponible Available fuel for fire trucks.
+   */
   public Bomberos(String id, int personalDisponible, int combustibleDisponible) {
     super(id, personalDisponible, combustibleDisponible);
   }
 
   @Override
   public void atenderEmergencia(Emergencia emergencia) {
-    // TODO Auto-generated method stub
+    // Implementation for handling emergencies
     throw new UnsupportedOperationException("Unimplemented method 'atenderEmergencia'");
   }
 
   @Override
   public void evaluarEstado(Emergencia emergencia) {
-    // TODO Auto-generated method stub
+    // Implementation for evaluating emergency state
     throw new UnsupportedOperationException("Unimplemented method 'evaluarEstado'");
   }
 

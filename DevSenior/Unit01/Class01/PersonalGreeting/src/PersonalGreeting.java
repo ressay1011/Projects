@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
+/**
+ * Personal Greeting.
+ * This class prompts the user for their name, validates the input,
+ * formats the name by capitalizing the first letter, and displays
+ * a personalized greeting message.
+ */
 public class PersonalGreeting {
+    /**
+     * Main entry point of the program.
+     * Handles user interaction, name validation, and formatted output.
+     * 
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
 
         // Create a Scanner object to receive user input

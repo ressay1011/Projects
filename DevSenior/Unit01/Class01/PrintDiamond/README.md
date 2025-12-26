@@ -1,29 +1,29 @@
-# Programa: Imprimir Diamante :large_blue_diamond:
+# 💎 Programa: Imprimir Diamante
 
-## Descripción:
+## 📝 Descripción:
 
 Este programa Java básico se encarga de:
 
-1. Imprimir un diamante hecho de caracteres en la consola de comandos.
+1.  ✨ Imprimir un diamante hecho de asteriscos en la consola de comandos.
 
-[Ejecutar](https://onlinegdb.com/0Lz96T_YEJ) :arrow_forward:
+▶️ [Ejecutar](https://onlinegdb.com/0Lz96T_YEJ)
 
-Tecnologías Utilizadas:
+## 🛠️ Tecnologías Utilizadas:
 
-**Java** :coffee:: Lenguaje de programación utilizado para desarrollar el programa.
+- **Java** ☕: Lenguaje de programación utilizado para desarrollar el programa.
 
-#
+---
 
-# Program: Print Diamond :large_blue_diamond:
+# 💎 Program: Print Diamond
 
-## Description:
+## 📝 Description:
 
 This simple Java program is designed to:
 
-1. Print a diamond made of characters in the command console.
+1.  ✨ Print a diamond made of asterisks in the command console.
 
-[Run](https://onlinegdb.com/0Lz96T_YEJ) :arrow_forward:
+▶️ [Run](https://onlinegdb.com/0Lz96T_YEJ)
 
-Technologies Used:
+## 🛠️ Technologies Used:
 
-**Java** :coffee:: Programming language used to develop the program.
+- **Java** ☕: Programming language used to develop the program.

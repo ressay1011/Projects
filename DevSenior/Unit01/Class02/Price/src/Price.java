@@ -1,8 +1,17 @@
 /**
- * The `Price` class calculates and displays the price per kilogram of a
- * product.
+ * Price Calculator.
+ * This class calculates the price per kilogram of a product based on a
+ * smaller portion's price. It is designed to verify the accuracy of a
+ * provided market price label.
  */
 public class Price {
+    /**
+     * Main entry point of the program.
+     * Performs price calculation using floating-point math and displays
+     * the result formatted for currency.
+     * 
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
         float price; // Declare a float variable to store the calculated price.
 

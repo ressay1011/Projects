@@ -1,18 +1,49 @@
-## Getting Started
+# 🚑 Sistema de Gestión de Emergencias
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📝 Descripción:
 
-## Folder Structure
+Este proyecto en Java implementa un sistema para la gestión y respuesta a emergencias. Utiliza conceptos avanzados como clases abstractas, interfaces y herencia.
 
-The workspace contains two folders by default, where:
+### ✨ Características principales:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1.  **🚨 Gestión de Emergencias:** Clase base abstracta `Emergencia` para diferentes tipos de situaciones.
+2.  **🚒 Servicios de Respuesta:** Implementación de servicios como `Bomberos` que extienden de `ServicioBase`.
+3.  **💪 Disponibilidad de Recursos:** Seguimiento de personal y combustible disponible para cada servicio.
+4.  **⏱️ Seguimiento del Tiempo:** Cálculo automático de tiempos de respuesta y atención.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 🧱 Estructura del Proyecto:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `Emergencia`: Clase abstracta que define las propiedades básicas de una emergencia.
+- `ServicioBase`: Clase base que gestiona recursos (personal/combustible).
+- `IResponderEmergencia`: Interfaz que define las acciones de respuesta.
+- `Bomberos`: Implementación específica de un servicio de respuesta.
 
-## Dependency Management
+## 🛠️ Tecnologías Utilizadas:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **Java** ☕: Lenguaje de programación.
+
+---
+
+# 🚑 Emergency Management System
+
+## 📝 Description:
+
+This Java project implements a system for emergency management and response. It utilizes advanced concepts such as abstract classes, interfaces, and inheritance.
+
+### ✨ Key Features:
+
+1.  **🚨 Emergency Management:** Abstract base class `Emergency` for different types of situations.
+2.  **🚒 Response Services:** Implementation of services like `Firefighters` extending from `BaseService`.
+3.  **💪 Resource Availability:** Tracking available personnel and fuel for each service.
+4.  **⏱️ Time Tracking:** Automatic calculation of response and attention times.
+
+## 🧱 Project Structure:
+
+- `Emergencia`: Abstract class defining basic emergency properties.
+- `ServicioBase`: Base class managing resources (personnel/fuel).
+- `IResponderEmergencia`: Interface defining response actions.
+- `Bomberos`: Specific implementation of a response service.
+
+## 🛠️ Technologies Used:
+
+- **Java** ☕: Programming language.

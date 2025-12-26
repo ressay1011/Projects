@@ -1,7 +1,17 @@
 import java.util.Scanner;
 
+/**
+ * Main class to manage vehicle registrations (Cars and Motorcycles).
+ * This application allows users to interactively register multiple vehicles,
+ * inputting their specific details and storing them in an array.
+ */
 public class Main {
 
+    /**
+     * Entry point of the vehicle management application.
+     * 
+     * @param args Command line arguments (not used).
+     */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         Carro carro = new Carro();
@@ -153,11 +163,24 @@ public class Main {
         } while (i < vehiculos.length);
     }
 
+    /**
+     * Overloaded method to verify if a string is not blank and matches letters.
+     * 
+     * @param respuesta The string to verify.
+     * @return true if valid.
+     */
     public static boolean verificar(String respuesta) {
         String[] opciones = { " " };
         return verificar(respuesta, opciones);
     }
 
+    /**
+     * Verifies if a string matches a list of allowed options.
+     * 
+     * @param respuesta The string to verify.
+     * @param opciones  An array of valid options.
+     * @return true if matches or if options are empty but string is valid letters.
+     */
     public static boolean verificar(String respuesta, String[] opciones) {
         var verificacion = true;
 
