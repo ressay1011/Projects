@@ -1,18 +1,27 @@
-## Getting Started
+# Proyecto: Acuario
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este programa Java calcula el número total de peces en un acuario.
 
-## Folder Structure
+- El acuario contiene **284** peces rojos y **163** peces azules.
+- El programa suma ambas cantidades y muestra el resultado total por consola.
 
-The workspace contains two folders by default, where:
+**Conceptos de Java aplicados:**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Declaración de variables de tipo entero (`int`).
+- Operación de adición.
+- Uso del método `System.out.printf()` para imprimir la salida formateada.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# Project: Aquarium
 
-## Dependency Management
+This Java program calculates the total number of fish in an aquarium.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- The aquarium contains **284** red fish and **163** blue fish.
+- The program adds both quantities and displays the total result to the console.
+
+**Applied Java Concepts:**
+
+- Declaration of integer variables (`int`).
+- Addition operation.
+- Use of the `System.out.printf()` method for formatted output.

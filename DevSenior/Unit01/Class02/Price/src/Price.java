@@ -1,10 +1,19 @@
+/**
+ * The `Price` class calculates and displays the price per kilogram of a
+ * product.
+ */
 public class Price {
     public static void main(String[] args) {
-        float price; // Store the price
+        float price; // Declare a float variable to store the calculated price.
 
-        price = (5.95f * 1000) / 100; // Calculate the price by multiplying 1000 by 5.95 and then dividing by 100
+        // Calculate the price per kilogram.
+        // The product costs $5.95 per 100 grams. To get the price per kilogram (1000
+        // grams),
+        // we multiply the 100-gram price by 10 (since 1000 grams / 100 grams = 10).
+        price = (5.95f * 1000) / 100;
 
-        // Print the result, formatting the price to 2 decimal places
+        // Print the result, explaining the scenario and displaying the calculated price
+        // formatted to two decimal places.
         System.out.printf(
                 "In the market, we can find that the price of the product Pernil Iberic D'Engreix Llen."
                         + "Azuaga in a 100-gram portion costs $5.95, and the seller tells us that the price per kilo is $29.75. "
